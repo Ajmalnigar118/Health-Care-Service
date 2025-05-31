@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>services - Online HealthCare Service</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../Css/service.css">
+</head>
+<body>
+
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+  <div class="container">
+    <a class="navbar-brand" href="#">HealthCare Service</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <ul class="navbar-nav mx-auto">
+        <!-- Home with dropdown card -->
+<li class="nav-item dropdown-card-parent position-relative">
+       <a class="nav-link" href="../html/index.html">Home</a>
+         <div class="dropdown-card">
+          <h6>Welcome to HealthCare</h6>
+          <p>Explore our trusted services, book your appointment easily, and begin your health journey with us.</p>
+        <a href="../html/services.html" class="btn btn-sm btn-outline-primary mt-2">Explore Services</a>
+          </div>
+</li>
+        <!-- About with dropdown card -->
+<li class="nav-item dropdown-card-parent position-relative">
+  <a class="nav-link" href="../html/about.html">About</a>
+  <div class="dropdown-card">
+    <h6>About Us</h6>
+    <p>Learn about our mission, dedicated team, and commitment to providing top healthcare services with compassion.</p>
+    <a href="../html/about.html" class="btn btn-sm btn-outline-primary mt-2">Read More</a>
+  </div>
+</li>
+
+<!-- Doctors with dropdown card -->
+<li class="nav-item dropdown-card-parent position-relative">
+  <a class="nav-link" href="../html/doctors.html">Doctors</a>
+  <div class="dropdown-card">
+    <h6>Our Doctors</h6>
+    <p>Meet our expert medical professionals dedicated to providing quality care and expert treatment for every patient.</p>
+    <a href="../html/doctors.html" class="btn btn-sm btn-outline-primary mt-2">Meet Doctors</a>
+  </div>
+</li>
+
+        <!-- Services with dropdown card -->
+<li class="nav-item dropdown-card-parent position-relative">
+  <a class="nav-link" href="../html/services.html">Services</a>
+  <div class="dropdown-card">
+    <h6>Our Services</h6>
+    <p>Discover a range of healthcare services including general consultation, diagnostics, and emergency support.</p>
+    <a href="../html/services.html" class="btn btn-sm btn-outline-primary mt-2">View Services</a>
+  </div>
+</li>
+
+        <!-- Contact with dropdown card -->
+<li class="nav-item dropdown-card-parent position-relative">
+  <a class="nav-link" href="../html/contact.html">Contact</a>
+  <div class="dropdown-card">
+    <h6>Get in Touch</h6>
+    <p>Reach out to us for inquiries, detailed information, or to send a message directly to our team.</p>
+    <a href="../html/contact.html" class="btn btn-sm btn-outline-primary mt-2">Contact Us</a>
+  </div>
+</li>
+
+      </ul>
+      <div class="d-flex">
+    <a href="../html/login.html" class="btn btn-outline-primary me-2">Login</a>
+    <a href="../html/signup.html" class="btn btn-primary">Signup</a>
+  </div>
+    </div>
+  </div>
+</nav>
+<!-- Navbar End -->
+
+
+<!-- Services Section Start -->
+<section id="services" class="py-5 fade-section">
+  <div class="container text-center">
+    <h2 class="mb-4">Our Healthcare Services</h2>
+    <p class="lead">We offer a wide range of healthcare services to ensure your well-being. Check out our services below.</p>
+  </div>
+</section>
+
+<!-- Service Cards Start -->
+<section id="service-cards" class="py-5 fade-section">
+  <div class="container">
+    <div class="row">
+      <!-- Service 1 -->
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-sm service-card">
+          <img src="../Image/service 1.jpg" class="card-img-top" alt="Service 1" />
+          <div class="card-body text-center">
+            <h5 class="card-title">Consultation</h5>
+            <p class="card-text">Get expert consultations from qualified healthcare professionals online or in person.</p>
+            <button class="btn btn-primary mb-2" onclick="showDetails('Consultation')">More Details</button>
+            <a href="doctors.html" class="btn btn-outline-secondary">Meet Our Doctors</a>
+          </div>
+        </div>
+      </div>
+      <!-- Service 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-sm service-card">
+          <img src="../Image/service 2.jpg" class="card-img-top" alt="Service 2" />
+          <div class="card-body text-center">
+            <h5 class="card-title">Health Monitoring</h5>
+            <p class="card-text">Monitor your health through regular check-ups and preventive care from our doctors.</p>
+            <button class="btn btn-primary mb-2" onclick="showDetails('Health Monitoring')">More Details</button>
+            <a href="doctors.html" class="btn btn-outline-secondary">Meet Our Doctors</a>
+          </div>
+        </div>
+      </div>
+      <!-- Service 3 -->
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-sm service-card">
+          <img src="../Image/service 3.jpg" class="card-img-top" alt="Service 3" />
+          <div class="card-body text-center">
+            <h5 class="card-title">Online Therapy</h5>
+            <p class="card-text">Access therapy sessions with licensed professionals from the comfort of your home.</p>
+            <button class="btn btn-primary mb-2" onclick="showDetails('Online Therapy')">More Details</button>
+            <a href="doctors.html" class="btn btn-outline-secondary">Meet Our Doctors</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Service Cards End -->
+
+
+<!-- Modal for More Details -->
+<div class="modal fade" id="detailsModal" tabindex="-1" aria-labelledby="detailsModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="detailsModalLabel">Service Details</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="modalContent">
+        <!-- JavaScript will insert content here -->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Scroll to Top Button -->
+<button onclick="scrollToTop()" id="scrollBtn" title="Go to top">↑</button>
+
+<footer class="bg-dark text-white pt-4 mt-5">
+  <div class="container">
+    <div class="row">
+
+      <!-- Brand and About -->
+      <div class="col-md-4 mb-3">
+        <h5 class="text-primary">HealthCare Service</h5>
+        <p>Providing quality medical care with trusted professionals and modern facilities. Your health is our top priority.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-4 mb-3">
+        <h6>Quick Links</h6>
+        <ul class="list-unstyled">
+          <li><a href="../html/index.html" class="text-white text-decoration-none">Home</a></li>
+          <li><a href="../html/about.html" class="text-white text-decoration-none">About</a></li>
+          <li><a href="../html/services.html" class="text-white text-decoration-none">Services</a></li>
+          <li><a href="../html/contact.html" class="text-white text-decoration-none">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-4 mb-3">
+        <h6>Contact Us</h6>
+        <p>Email: info@healthcareservice.com</p>
+        <p>Phone: +92-300-1234567</p>
+        <p>Address: Main Road, Lahore, Pakistan</p>
+      </div>
+    </div>
+
+    <hr class="bg-white" />
+    <div class="text-center pb-3">
+      &copy; 2025 HealthCare Service. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../Js/service.js"></script>
+</body>
+</html>

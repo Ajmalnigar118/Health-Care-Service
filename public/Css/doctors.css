@@ -1,0 +1,233 @@
+/* Custom Styles for Navbar */
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0d6efd !important;
+  }
+  
+  .nav-link {
+    color: #545454 !important;
+    margin-right: 15px;
+  }
+  
+  .nav-link:hover {
+    color: #0d6efd !important;
+  }
+  
+  /* General Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #c1c8ce;
+  }
+  
+  /* Navbar Customization */
+  .navbar {
+    background-color: #343a40;
+  }
+  
+  .navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  
+  .navbar-nav .nav-link {
+    color: #fff;
+    font-size: 1.1rem;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #f1c40f;
+  }
+
+  /*CSS for Animation and Sticky Navbar:
+
+  /* Sticky Navbar Styling */
+.navbar.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff; /* Ensures navbar has a white background */
+}
+
+/* Active Navbar Link */
+.navbar-nav .nav-link.active {
+    color: #007bff !important; /* Highlight active section link */
+    font-weight: bold;
+}
+
+
+/* Dropdown Card Style */
+.dropdown-card {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 250px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.dropdown-card h6 {
+  margin: 0 0 5px;
+  color: #007bff;
+  font-size: 16px;
+}
+
+.dropdown-card p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.dropdown-card a.btn {
+  font-size: 13px;
+  padding: 4px 10px;
+}
+
+/* Show card on hover */
+.dropdown-card-parent:hover .dropdown-card {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0px);
+}
+
+/* Section Headings */
+section h2 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 30px;
+}
+.fade-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* Doctor Cards Section */
+.doctor-card {
+  max-width: 350px;
+  margin: 0 auto;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+}
+
+.doctor-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Doctor Images */
+.doctor-img {
+  height: 300px;
+  object-fit: cover;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+}
+
+/* Doctor Card Body */
+.card-body {
+  padding: 1rem 1.2rem;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
+}
+
+/* Collapsible Details */
+.doctor-name {
+  color: #007bff;
+  font-weight: bold;
+  cursor: pointer;
+  display: inline-block;
+  transition: color 0.3s;
+}
+
+.doctor-name:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+.collapse p {
+  margin: 0.4rem 0;
+  font-size: 0.93rem;
+}
+
+/* Section Spacing */
+.container {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+  .doctor-card {
+    max-width: 90%;
+  }
+
+  .navbar-brand {
+    font-size: 1.3rem;
+  }
+
+  section h2 {
+    font-size: 1.8rem;
+  }
+}
+
+footer {
+  
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+footer h6 {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+footer a:hover {
+  color: #0dcaf0;
+  text-decoration: underline;
+}
+
+footer hr {
+  opacity: 0.2;
+}
+/* Smooth fade-in effect for body content */
+body {
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

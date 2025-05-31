@@ -1,0 +1,208 @@
+/* index.css */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar styling */
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color:#0d6efd;
+
+}
+
+.nav-link {
+  font-size: 1.1rem;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #0d6efd;
+}
+
+/* Dropdown Card Style */
+.dropdown-card {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 250px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.dropdown-card h6 {
+  margin: 0 0 5px;
+  color: #007bff;
+  font-size: 16px;
+}
+
+.dropdown-card p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.dropdown-card a.btn {
+  font-size: 13px;
+  padding: 4px 10px;
+}
+
+/* Show card on hover */
+.dropdown-card-parent:hover .dropdown-card {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0px);
+}
+
+
+/* Hero Section */
+.hero {
+  background: #007bff;
+  color: rgb(248, 105, 70);
+  padding: 60px 0;
+}
+
+.hero h1 {
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.25rem;
+}
+.hero a{
+  background-color: rgb(248, 105, 70); ;
+}
+
+/* Smooth fade-in effect on page load */
+body {
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+body.fade-in {
+  opacity: 1;
+}
+
+/* Optionally add fade-in to specific sections */
+.fade-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* Services Section */
+#services h2 {
+  font-weight: 700;
+}
+
+.card {
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card-title {
+  font-weight: 600;
+}
+
+.card-text {
+  font-size: 1rem;
+}
+
+/* Ensure all cards are same height */
+#services .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#services .col-md-4 {
+  display: flex;
+}
+
+#services .card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Make all card images the same height */
+#services .card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Ensure card body fills available space */
+#services .card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+
+/* Appointment Section */
+#appointment-section {
+  background-color: #0d6efd;
+  padding: 40px 15px;
+  margin-top: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgb(0 0 0 / 0.1);
+}
+
+#appointmentForm .form-label {
+  font-weight: 600;
+}
+
+#appointmentMessage {
+  font-size: 1.2rem;
+  color: green;
+}
+
+/* Footer */
+footer {
+  background-color: #222;
+  color: white;
+  padding: 40px 15px;
+}
+
+footer h5, footer h6 {
+  color: #0d6efd;
+}
+
+footer a {
+  color: white;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  #appointmentForm {
+    width: 100% !important;
+  }
+}

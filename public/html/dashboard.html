@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>User Dashboard</title>
+  <link rel="stylesheet" href="../Css/dashboard.css" />
+</head>
+<body>
+  <div class="dashboard-container">
+    <h2>Welcome, <span id="userName">User</span>!</h2>
+
+    <div class="user-info">
+      <img id="profileImage" src="" alt="Profile Picture" width="120" />
+      <p><strong>Father's Name:</strong> <span id="userFatherName"></span></p>
+      <p><strong>Email:</strong> <span id="userEmail"></span></p>
+      <p><strong>Phone:</strong> <span id="userPhone"></span></p>
+    </div>
+
+    <button onclick="toggleEditForm()">Edit Profile</button>
+    <button onclick="togglePasswordForm()">Change Password</button>
+    <button onclick="logout()">Logout</button>
+
+    <!-- Edit Profile Form -->
+    <div id="editProfileForm" class="hidden">
+      <h3>Edit Profile</h3>
+      <form id="profileUpdateForm" enctype="multipart/form-data">
+        <input type="text" name="name" id="editName" placeholder="Name" />
+        <input type="text" name="fatherName" id="editFatherName" placeholder="Father's Name" />
+        <input type="email" name="email" id="editEmail" placeholder="Email" />
+        <input type="text" name="phone" id="editPhone" placeholder="Phone" />
+        <input type="file" name="profileImage" />
+        <button type="submit">Update Profile</button>
+      </form>
+    </div>
+
+    <!-- Change Password Form -->
+    <div id="changePasswordForm" class="hidden">
+      <h3>Change Password</h3>
+      <input type="password" id="oldPassword" placeholder="Old Password" />
+      <input type="password" id="newPassword" placeholder="New Password" />
+      <button onclick="changePassword()">Change</button>
+    </div>
+  </div>
+
+  <script src="../Js/Dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!-- public/signup.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Signup</title>
+  <link rel="stylesheet" href="../Css/login.css"/>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Signup</h2>
+    <!-- Form tag with autocomplete enabled -->
+    <form id="signupForm" action="/signup" method="POST" autocomplete="on">
+      <input type="text" name="name" placeholder="Full Name" required autocomplete="name" />
+      <input type="text" name="fatherName" placeholder="Father's Name" required autocomplete="additional-name" />
+      <input type="email" name="email" placeholder="Email" required autocomplete="email" />
+      <input type="text" name="phone" placeholder="Phone Number" required autocomplete="tel" />
+      <input type="password" name="password" placeholder="Password" required autocomplete="new-password" />
+      <button type="submit">Signup</button>
+    </form>
+    <p>Already have an account? <a href="../html/login.html">Login here</a></p>
+    <div id="responseMessage"></div>
+  </div>
+  <script src="../Js/login.js"></script>
+</body>
+</html>

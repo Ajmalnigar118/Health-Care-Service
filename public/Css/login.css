@@ -1,0 +1,61 @@
+/* public/Css/auth.css */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #e3f2fd, #bbdefb);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.form-container {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 400px;
+}
+
+h2 {
+  text-align: center;
+  color: #0d47a1;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #90caf9;
+  border-radius: 8px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #1976d2;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #1565c0;
+}
+
+a {
+  color: #0d47a1;
+  text-decoration: none;
+}
+
+#responseMessage {
+  margin-top: 10px;
+  text-align: center;
+  font-weight: bold;
+}
