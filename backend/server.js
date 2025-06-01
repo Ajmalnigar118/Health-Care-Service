@@ -9,10 +9,11 @@ const dotenv = require('dotenv');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
+// ✅ Updated Paths for Backend Models and Routes
 const Appointment = require('./models/Appointment');
 const Contact = require('./models/Contact');
 const User = require('./models/User');
-const adminRoutes = require('./backend/adminRoutes');
+const adminRoutes = require('./adminRoutes');
 
 dotenv.config();
 const PORT = process.env.PORT || 3000;
@@ -22,25 +23,24 @@ const secretKey = process.env.JWT_SECRET || "your_secret_key";
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '..', 'public')));
 app.use('/admin', adminRoutes);
 
 // MongoDB Connection
-mongoose.connect(process.env.MONGO_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
-.then(() => console.log('✅ MongoDB Connected'))
-.catch((err) => console.error('❌ MongoDB Connection Error:', err));
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => console.log('✅ MongoDB Connected'))
+  .catch((err) => console.error('❌ MongoDB Connection Error:', err));
+
 
 // Routes
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public/html/index.html'));
+  res.sendFile(path.join(__dirname, '..', 'public', 'html', 'index.html'));
 });
 
 app.get('/contact', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public/html/contact.html'));
+  res.sendFile(path.join(__dirname, '..', 'public', 'html', 'contact.html'));
 });
+
 
 app.post('/api/appointments', async (req, res) => {
   try {

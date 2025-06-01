@@ -7,7 +7,7 @@ const router = express.Router();
 
 
 // Middleware import کرو
-const { verifyAdminToken } = require('../middlewares/authMiddleware');
+const { verifyAdminToken } = require('./middlewares/authMiddleware');
 
 
 // Use the middleware
@@ -38,7 +38,7 @@ router.get('/appointments', async (req, res) => {
 
 module.exports = router;
 
-const Appointment = require('../models/Appointment');
+const Appointment = require('./models/Appointment');
 
 function adminLogin(req, res) {
   let body = "";
